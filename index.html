@@ -245,11 +245,11 @@
             </h3>
             <p class="subtitle-a">
               </br>
-              Since this is a highly imbalanced dataset, the accuracy score is not a good predictor of the model performance.  We do not want to misclassify fraudulent transactions so true negative rate should be low.  At the same time, we don't care about false possitive in the model.  If a non-fraudulent transaction is marked as fraudulent, the only cost on the company's behalf is a potential waste of time.  Recall reduces false-negatives and precision reduces false-positives.  Imbalanced dataset also require precision AUC curves, which we will be performing with both models. 
+              Since this is a highly imbalanced dataset, the accuracy score is not a good predictor of the model performance. We do not want to misclassify fraudulent transactions so false negative rate should be low, since misclassifying a fraudulent transaction as a legal transaction is catastrophic. At the same time, we don't care about false possitives as much in the model, since if a non-fraudulent transaction is marked as fraudulent, the only cost on the company's behalf is a potential waste of time. Recall reduces false-negatives and precision reduces false-positives. Imbalanced dataset also require precision AUC curves, which we will be performing with both models.
             
             </br> </br>
 
-              I did not have the time for this assessment, but perhaps XGBoost would be best for this dataset because of hyperparameter opportunities with regularization for penalizing multi-colinearity.
+            I did not have the time for this assessment, but perhaps XGBoost would be best for this dataset because of hyperparameter opportunities with regularization for penalizing multi-colinearity. Another thing to point out is that in the production environment, where we could have access to more computing resources, setting the number of splits (k) between 5 to 10 would be more ideal. The issue is that such a large value of k increases compute time, so for this analysis the value of k was set to 2.
             
             </br></br>
               

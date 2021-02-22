@@ -199,7 +199,7 @@
           </h7>
           <div class="line-mf"></div>
           <p class="subtitle-a">
-            I need to check to see whether I need to perform a stratified k-fold cross validation.  You usually need to do something like this if a random train-test split could end up creating a massive imbalance between the proportions of your y_train and y_test splits.  We clearly have an imbalance in this dataset, since there are 8213 known fraudulent transactions and 6354407 known non-fraudylent transactions.</br>
+            I need to check to see whether I need to perform a stratified k-fold cross validation.  You usually need to do something like this if a random train-test split could end up creating a massive imbalance between the proportions of your y_train and y_test splits.  We clearly have an imbalance in this dataset, since there are 8213 known fraudulent transactions and 6354407 known non-fraudulent transactions.</br>
           <img src="resources/exploratory data analysis/label_imbalance.png" alt="Correlation Matrix" class="center">
           </br>
           </p>
@@ -262,8 +262,14 @@
                 <li> Preparation of data using stratified k-fold cross validation since this is a higly imbalaned dataset with fewer 1s than 0s in the labels.  I am performing 2 splits with the StratifiedKFold. </li>
                 <li> I will be using the following classification algorithms for training the model as well as assessing their accuracies: </li>
                   <ol type = "1">
-                    <li> Logistic Regresstion (Accuracy assessed with confusion matrix.) </li>
-                    <li> Random Forrest (This model actually performed satisfactorily, but the results can only be trusted with further hyperparameter tuning and using algorithms such as XGBoost.) </li>
+                    <li> Logistic Regresstion 
+                      <ul> Accuracy assessed with confusion matrix. </ul>
+                      <ul> For the second split, the algorithm performed considerably better (False possitive count went down from 10585 to 4224).   </ul>
+                    </li>
+                    <li> Random Forrest 
+                      <ul> This model actually performed satisfactorily, but the results can only be trusted with further hyperparameter tuning and using algorithms such as XGBoost. </ul>
+                      <ul> We also see a slight improvement in the model's accuracy in the second split. </ul>
+                    </li>
                   </ol>
               </ol>
             </p>

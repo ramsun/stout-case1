@@ -124,8 +124,8 @@
   <section id="work" class="portfolio-mf sect-pt4 route">
     <div class="row">
       <div class="col-sm-12">
-        <div class="title-box text-center">
-          <h3 class="title-a">
+        <div class="title-box text-left">
+          <h3 class="title-a" style="text-align:center">
             Exploratory Data Analysis
           </h3>
           <div class="line-mf"></div>
@@ -238,11 +238,12 @@
   <section id="play" class="services-mf route">
     <div class="container">
       <div class="row">
-        <div class="title-box text-center">
+        <div class="title-box text-left">
           <div class="col-md-12">
-            <h3 class="title-a">
+            <h3 class="title-a" style="text-align:center">
               Models
             </h3>
+            <div class="line-mf"></div>
             <p class="subtitle-a">
               </br>
               Since this is a highly imbalanced dataset, the accuracy score is not a good predictor of the model performance. We do not want to misclassify fraudulent transactions so false negative rate should be low, since misclassifying a fraudulent transaction as a legal transaction is catastrophic. At the same time, we don't care about false possitives as much in the model, since if a non-fraudulent transaction is marked as fraudulent, the only cost on the company's behalf is a potential waste of time. Recall reduces false-negatives and precision reduces false-positives. Imbalanced dataset also require precision AUC curves, which we will be performing with both models.
@@ -264,11 +265,12 @@
                   <ol type = "1">
                     <li> Logistic Regresstion 
                       <ul> Accuracy assessed with confusion matrix. </ul>
-                      <ul> For the second split, the algorithm performed considerably better (False possitive count went down from 10585 to 4224).   </ul>
+                      <ul> For the second split, the algorithm performed considerably better (False negative count went down from 10585 to 4224).   </ul>
                     </li>
                     <li> Random Forrest 
                       <ul> This model actually performed satisfactorily, but the results can only be trusted with further hyperparameter tuning and using algorithms such as XGBoost. </ul>
                       <ul> We also see a slight improvement in the model's accuracy in the second split. </ul>
+                      <ul>According to the ROC curve, with an AP score of 0.76, the model was able to predict 76% of the labels accurately. </ul>
                     </li>
                   </ol>
               </ol>

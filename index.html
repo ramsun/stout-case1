@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>World Happiness Index Visualization</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+  <!-- Favicons -->
+  <link href="static/downloaded/img/favicon.png" rel="icon">
+  <link href="static/downloaded/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Bootstrap CSS File -->
+  <link href= "static/downloaded/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="static/downloaded/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="static/downloaded/lib/animate/animate.min.css" rel="stylesheet">
+  <link href="static/downloaded/lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+  <link href="static/downloaded/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="static/downloaded/lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+  <link href="static/downloaded/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+    Theme Name: DevFolio
+    Theme URL: https://bootstrapmade.com/devfolio-bootstrap-portfolio-html-template/
+    Author: BootstrapMade.com
+    License: https://bootstrapmade.com/license/
+  ======================================================= -->
+
+  <!-- d3 JavaScript -->
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <!-- Needed for d3.rebind()-->
+  <!-- <script src="https://d3js.org/d3.v3.min.js"></script> -->
+
+  <!-- Our CSS -->
+  <link href="static/downloaded/css/style.css" rel="stylesheet">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <!-- Plotly and Vega dependencies -->
+  <!-- Plotly.js -->
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  
+  <!--table-->
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="https://cdn.datatables.net/1.10.9/js/jquery.dataTables.min.js"></script>
+</head>
+
+<!-- Contents of web-page-->
+<body id="page-top">
+  <!--/ Navbar start /-->
+  <nav class="navbar navbar-b navbar-trans navbar-expand-md fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll" href="#page-top"><b>Machine Learning</b></a>
+      <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarDefault"
+        aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation">
+      </button>
+      <div class="navbar-collapse collapse justify-content-end" id="navbarDefault">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link js-scroll" href="#about">Data</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll" href="#work">Exploratory Data Analysis</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll" href="#service">Feature Engineering</a>
+          </li>  
+          <li class="nav-item">
+            <a class="nav-link js-scroll" href="#play">Models</a>
+          </li>  
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!--/ Nav End /-->
+
+  <!--/ Website intoduction /-->
+  <div id="home" class="intro route bg-image" style="background-image: url(static/downloaded/img/hacker.jpg)">
+    <div class="overlay-itro"></div>
+    <div class="intro-content display-table">
+      <div class="table-cell">
+        <div class="container">
+          <h1 class="intro-title mb-4">Case 2: Fraud Detection</h1>
+          <p class="intro-subtitle" style="font-size:20px;">Amazing and insightful visualizations utilizing: </br><span class="text-slider-items">
+            Python,
+            Matplotlib,
+            Scikit Learn,
+            Pandas
+            </span><strong class="text-slider"></strong></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--/ End of website introduction /-->
+
+
+  <!-- Raw Data Beginning -->
+  <section id="about" class="about-mf sect-pt4 route">
+      <div class="row">
+          <div class="col-sm-12">
+            <div class="title-box text-center">
+              <h3 class="title-a">
+                Raw Data
+              </h3>
+              <div class="line-mf"></div>
+              <p class="subtitle-a">
+              </br>
+                Raw data was found from <a href="https://www.kaggle.com/ntnu-testimon/paysim1" style="color:#FF0000;">kaggle.</a>  </br>
+                This dataset is a fairly comprehensive record of fraud data available with millions of recorded transactions.  The goal of this exploration is to build a model that can accurately deduce when a transaction is fradulent.</br>
+              </p>
+              <img src="resources/exploratory data analysis/raw df.png" alt="Raw DF" class="center">
+            </div>
+          </div>
+      </div>
+    </br>
+  </section>
+  <!-- Raw Data End -->
+
+
+  <!-- Exploratory Data Analysis section start -->
+  <section id="work" class="portfolio-mf sect-pt4 route">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="title-box text-center">
+          <h3 class="title-a">
+            Exploratory Data Analysis
+          </h3>
+          <div class="line-mf"></div>
+          <p class="subtitle-a">
+          </br>
+            Before you can build a model, you will need to prepare data for the model.  There are a total of five methods that were performed in the EDA, which are:
+            <ol type = "1">
+              <li> Dropping Unnecessary Columns </li>
+              <li> Correlation Matrix </li>
+              <li> Checking for Nans </li>
+              <li> Check For Balance In Label (isFraud column) </li>
+            </ol>
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- 1 -->
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="title-box text-center">
+          <h7 class="title-a">
+            <small>Dropping Unnecessary Columns</small>
+          </h7>
+          <div class="line-mf"></div>
+          <p class="subtitle-a">
+            Removing unncessary columns helps prevent your model from learning from noise (over-fitting).  I dropped the 'nameOrig' and 'nameDest' columns.</br>
+          <img src="resources/exploratory data analysis/drop unnecessary columns.png" alt="Unnecessary Columns" class="center">
+          </br>
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- 2 -->
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="title-box text-center">
+          <h7 class="title-a">
+            <small>Correlation Matrix</small>
+          </h7>
+          <div class="line-mf"></div>
+          <p class="subtitle-a">
+            We can see that there is a strong correlation between the oldbalanceOrg and newbalanceOrig.  This colinearity may hint to the fact that we will need to use Descision Trees for our classfication, which are immune to colinearity.  Another solution is to apply a PCA (principle component analysis) to the dataset before performing logistic regression. </br>
+          <img src="resources/exploratory data analysis/correlation matrix.png" alt="Correlation Matrix" class="center">
+          </br>
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- 3 -->
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="title-box text-center">
+          <h7 class="title-a">
+            <small>Checking for Nans</small>
+          </h7>
+          <div class="line-mf"></div>
+          <p class="subtitle-a">
+            There are no nans in this dataset.  Below is a sample output for the amount column.</br>
+          <img src="resources/exploratory data analysis/Nan check.png" alt="Correlation Matrix" class="center">
+          </br>
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- 4-->
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="title-box text-center">
+          <h7 class="title-a">
+            <small>Check For Balance In Label (isFraud column)</small>
+          </h7>
+          <div class="line-mf"></div>
+          <p class="subtitle-a">
+            I need to check to see whether I need to perform a stratified k-fold cross validation.  You usually need to do something like this if a random train-test split could end up creating a massive imbalance between the proportions of your y_train and y_test splits.  We clearly have an imbalance in this dataset, since there are 8213 known fraudulent transactions and 6354407 known non-fraudylent transactions.</br>
+          <img src="resources/exploratory data analysis/label_imbalance.png" alt="Correlation Matrix" class="center">
+          </br>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Exploratory Data Analysis section end -->
+
+
+  <br> <br>
+
+  <!--/ Feature Engineering Begin /-->
+  <section id="service" class="services-mf route">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="title-box text-center">
+              <h3 class="title-a">
+                Feature Engineering: One Hot Encoding
+              </h3>
+              <div class="line-mf"></div>
+              <p class="subtitle-a">
+                I am using one-hot encoding as apposed to dummy encoding since the payment type is not ordinal (order does not matter).  The only column that was encoded was the payment type column. </br>
+              <img src="resources/exploratory data analysis/Encoding.png" alt="Encoding" class="center">
+              </br>
+              </p>
+            </div>
+          </div>
+        </div>
+    </section>
+  <!--/ Feature Engineering End /-->
+
+
+  <!--/ Models beginning /-->
+  <section id="play" class="services-mf route">
+    <div class="container">
+      <div class="row">
+        <div class="title-box text-center">
+          <div class="col-md-12">
+            <h3 class="title-a">
+              Models
+            </h3>
+            <p class="subtitle-a">
+              </br>
+              Since this is a highly imbalanced dataset, the accuracy score is not a good predictor of the model performance.  We do not want to misclassify fraudulent transactions so true negative rate should be low.  At the same time, we don't care about false possitive in the model.  If a non-fraudulent transaction is marked as fraudulent, the only cost on the company's behalf is a potential waste of time.  Recall reduces false-negatives and precision reduces false-positives.  Imbalanced dataset also require precision AUC curves, which we will be performing with both models. 
+            
+            </br> </br>
+
+              I did not have the time for this assessment, but perhaps XGBoost would be best for this dataset because of hyperparameter opportunities with regularization for penalizing multi-colinearity.
+            
+            </br></br>
+              
+              I plotted prescision-recall curves since there is an imbalanced dataset as apposed to ROC AUC curves, which you usually use for balanced datasets. 
+            
+            </br></br>
+              
+
+              <ol type = "1">
+                <li> Preparation of data using stratified k-fold cross validation since this is a higly imbalaned dataset with fewer 1s than 0s in the labels.  I am performing 2 splits with the StratifiedKFold. </li>
+                <li> I will be using the following classification algorithms for training the model as well as assessing their accuracies: </li>
+                  <ol type = "1">
+                    <li> Logistic Regresstion (Accuracy assessed with confusion matrix.) </li>
+                    <li> Random Forrest (This model actually performed satisfactorily, but the results can only be trusted with further hyperparameter tuning and using algorithms such as XGBoost.) </li>
+                  </ol>
+              </ol>
+            </p>
+        </div>
+        <h3><small>Logistic Regression: Run 1</small> </h3>
+        <div class="row">
+          <div class="col-xs-6 col-md-6"><img src="resources/models/LR Run 1.png"/></div>
+          <div class="col-xs-6 col-md-6"><img src="resources/models/LR Confusion Matrix Run 1.png"/></div>
+      </div>
+    </br>
+
+      <h3><small>Logistic Regression: Run 2</small> </h3>
+      <div class="row">
+        <div class="col-xs-6 col-md-6"><img src="resources/models/LR Run 2.png"/></div>
+        <div class="col-xs-6 col-md-6"><img src="resources/models/LR Cofusion Matrix Run 2.png"/></div>
+      </div>
+    </br>
+      <h3><small>Random Forest: Run 1</small> </h3>
+      <div class="row">
+        <div class="col-xs-6 col-md-6"><img src="resources/models/RF Run 1.png"/></div>
+        <div class="col-xs-6 col-md-6"><img src="resources/models/RF Confusion Matrix Run 1.png"/></div>
+      </div>
+      <div class = "row">
+        <img src="resources/models/RF PR Curve Run 1.png" alt="PR Curve Run 1" class="center">
+      </div>
+
+    </br>
+      <h3><small>Random Forest: Run 2</small> </h3>
+      <div class="row">
+        <div class="col-xs-6 col-md-6"><img src="resources/models/RF Run 2.png"/></div>
+        <div class="col-xs-6 col-md-6"><img src="resources/models/RF Confusion Matrix Run 2.png"/></div>
+      </div>
+      <div class = "row">
+        <img src="resources/models/RF PR Curve Run 2.png" alt="PR Curve Run 2" class="center">
+      </div>
+      </div>
+    </div>
+  </section>
+  <!--/ Models end /-->
+
+
+  <!--/ Section Footer /-->
+  <section class="paralax-mf footer-paralax bg-image sect-mt4 route" style="background-image: url({{url_for('static', filename = 'downloaded/img/overlay-bg.jpg')}})">
+    <div class="overlay-mf"></div>
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="copyright-box">
+              <p class="copyright">&copy; Copyright <strong>DevFolio</strong>. All Rights Reserved</p>
+              <div class="credits">
+                <!--
+                  All the links in the footer should remain intact.
+                  You can delete the links only if you purchased the pro version.
+                  Licensing information: https://bootstrapmade.com/license/
+                  Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=DevFolio
+                -->
+                Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </section>
+  <!--/ Section Contact-footer End /-->
+
+  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+  <div id="preloader"></div>
+
+
+  <!-- Import local scripts here -->
+  <!-- Leaflet Source Files -->
+  <!-- <script type="text/javascript" src ="{{url_for('static', filename = 'source/js/flag_data.js')}}"></script>
+  <script type="text/javascript" src ="{{url_for('static', filename = 'source/js/world_borders.js')}}"></script>
+  <script type="text/javascript" src ="{{url_for('static', filename = 'source/js/config.js')}}"></script>
+  <script type="text/javascript" src="{{url_for('static', filename = 'source/js/logic.js')}}"></script> -->
+
+
+  <!-- JavaScript Libraries -->
+  <script src="static/downloaded/lib/jquery/jquery.min.js"></script>
+  <script src="static/downloaded/lib/jquery/jquery-migrate.min.js"></script>
+  <script src="static/downloaded/lib/popper/popper.min.js"></script>
+  <script src="static/downloaded/lib/bootstrap/js/bootstrap.min.js"></script>
+  <script src="static/downloaded/lib/easing/easing.min.js"></script>
+  <script src="static/downloaded/lib/counterup/jquery.waypoints.min.js"></script>
+  <script src="static/downloaded/lib/counterup/jquery.counterup.js"></script>
+  <script src="static/downloaded/lib/owlcarousel/owl.carousel.min.js"></script>
+  <script src="static/downloaded/lib/lightbox/js/lightbox.min.js"></script>
+  <script src="static/downloaded/lib/typed/typed.min.js"></script>
+  
+  <!-- Contact Form JavaScript File -->
+  <script src="static/downloaded/contactform/contactform.js')}}"></script>
+
+  <!-- Template Main Javascript File -->
+  <script src="static/downloaded/js/main.js"></script>
+
+</body>
+</html>

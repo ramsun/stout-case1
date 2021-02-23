@@ -4,7 +4,7 @@ https://nbviewer.jupyter.org/github/ramsun/stout-case1/blob/main/case1.ipynb
 
 ## Website Screenshot
 ### Landing Page
-![2016 Data](/readme_assets/landing.png "2016 Data And Dropdown")
+![Landing](/readme_assets/landing.png "Landing Page Screenshot")
 
 ## Purpose:
 Being able to actuarately classify a transaction as fraudulent is extremely important for any bank.  This process can be difficult for massive organizations, but with the help of machine learning, the process can be made easier.  This repo showcases the use of the Logistic Regression and Random Forest classification algorithms for classifying a transaction as fraudulent or not. 
